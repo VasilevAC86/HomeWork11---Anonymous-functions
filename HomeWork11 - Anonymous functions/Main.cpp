@@ -44,7 +44,7 @@ int main() {
 	};
 	Functor calculator(result(num1, num2, sym)); // Создаём функтор c результатом анонимной функции
 	char choice;
-	do { // Цикл для лемонстрации того, что функтор хранит неизменный результат расчёта, а в консоль каждый раз выводит то, что \
+	do { // Цикл для демонстрации того, что функтор хранит неизменный результат расчёта, а в консоль каждый раз выводит то, что \
 		просит пользователь
 		std::cout << "\033[93mEnter the number of decimal places -> \033[0m";
 		std::cin >> accuracy;
@@ -57,7 +57,7 @@ int main() {
 			while (accuracy < 0) {
 				std::cout << "\033[93mEnter the number of decimal places one more time -> \033[0m";
 				std::cin >> accuracy;
-			
+			}
 		}
 		// Выводим результат в соответствии с заданной пользователем точностью
 		std::cout << std::endl << "\033[92mThe result is \033[0m" << calculator(accuracy) << std::endl << std::endl << \
